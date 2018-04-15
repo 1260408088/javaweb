@@ -5,3 +5,5 @@ web项目
 ![image](https://github.com/1260408088/javaweb/blob/master/bos-parent/bos-web/src/main/webapp/images/view.PNG)
 预览图
 ## 2.ssh_crm   客户管理系统
+![image](https://github.com/1260408088/javaweb/blob/master/ssh_crm/WebContent/images/ssh_crm.PNG)
+预览图
