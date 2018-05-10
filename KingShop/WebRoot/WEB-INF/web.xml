@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>
+  
+  <!-- filter -->
+  
+  	<filter>
+	  	<filter-name>/AutoLogin</filter-name>
+	  	<filter-class>com.king.web.filter.AutoLoginFilter</filter-class>
+	</filter>
+	  <filter-mapping>
+	  	<filter-name>/AutoLogin</filter-name>
+	  	<url-pattern>/*</url-pattern>
+	  </filter-mapping>
+  
+  <!-- get post提交的乱码解决 -->
+	<filter>
+		<filter-name>GenericEncoding</filter-name>
+		<filter-class>com.king.web.filter.GenericEncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>GenericEncoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+  
+	  
+  <servlet>
+    <servlet-name>registerServlet</servlet-name>
+    <servlet-class>com.king.web.registerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>activeServlet</servlet-name>
+    <servlet-class>com.king.web.activeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>checkUsername</servlet-name>
+    <servlet-class>com.king.web.checkUsername</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>productServlet</servlet-name>
+    <servlet-class>com.king.web.productServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>categorylistServlet</servlet-name>
+    <servlet-class>com.king.web.categorylistServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>productListByCid</servlet-name>
+    <servlet-class>com.king.web.productListByCid</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>testServlet</servlet-name>
+    <servlet-class>com.king.web.testServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>productinfoServlet</servlet-name>
+    <servlet-class>com.king.web.productinfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>BaseServlet</servlet-name>
+    <servlet-class>com.king.web.BaseServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PrdocutServlet</servlet-name>
+    <servlet-class>com.king.web.PrdocutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>addProductToCar</servlet-name>
+    <servlet-class>com.king.web.addProductToCar</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>RemoveProToCart</servlet-name>
+    <servlet-class>com.king.web.RemoveProToCart</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteCart</servlet-name>
+    <servlet-class>com.king.web.DeleteCart</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>submitOredrServlet</servlet-name>
+    <servlet-class>com.king.web.submitOredrServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>com.king.web.UserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CheckImageServlet</servlet-name>
+    <servlet-class>com.king.utils.CheckImageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>confirmOrderServlcet</servlet-name>
+    <servlet-class>com.king.web.confirmOrderServlcet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CallbackServlet</servlet-name>
+    <servlet-class>com.king.web.CallbackServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OrderinfoServlet</servlet-name>
+    <servlet-class>com.king.web.OrderinfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LogOutServlet</servlet-name>
+    <servlet-class>com.king.web.LogOutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindAllCategoryServlet</servlet-name>
+    <servlet-class>com.king.web.admin.FindAllCategoryServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AdminAddProductServlet</servlet-name>
+    <servlet-class>com.king.web.admin.AdminAddProductServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>orderlistServlet</servlet-name>
+    <servlet-class>com.king.web.admin.orderlistServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>findOrderInfoByOidServlet</servlet-name>
+    <servlet-class>com.king.web.admin.findOrderInfoByOidServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>allcategorynameServlet</servlet-name>
+    <servlet-class>com.king.web.admin.allcategorynameServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>allProductlistServlet</servlet-name>
+    <servlet-class>com.king.web.admin.allProductlistServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>deletecategoryServlet</servlet-name>
+    <servlet-class>com.king.web.admin.deletecategoryServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>adminCategoryServlet</servlet-name>
+    <servlet-class>com.king.web.admin.adminCategoryServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>editCategoryServlet</servlet-name>
+    <servlet-class>com.king.web.admin.editCategoryServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>deleteProductServlet</servlet-name>
+    <servlet-class>com.king.web.admin.deleteProductServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>productDatebackServlet</servlet-name>
+    <servlet-class>com.king.domain.productDatebackServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>SerachServlet</servlet-name>
+    <servlet-class>com.king.web.SerachServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>SerachPageServlet</servlet-name>
+    <servlet-class>com.king.update.page.SerachPageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateProductServlet</servlet-name>
+    <servlet-class>com.king.web.admin.UpdateProductServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>registerServlet</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>activeServlet</servlet-name>
+    <url-pattern>/active</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>checkUsername</servlet-name>
+    <url-pattern>/checkUsername</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>productServlet</servlet-name>
+    <url-pattern>/product</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>categorylistServlet</servlet-name>
+    <url-pattern>/categorylist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>productListByCid</servlet-name>
+    <url-pattern>/productListByCid</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>testServlet</servlet-name>
+    <url-pattern>/test</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>productinfoServlet</servlet-name>
+    <url-pattern>/productinfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BaseServlet</servlet-name>
+    <url-pattern>/BaseServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PrdocutServlet</servlet-name>
+    <url-pattern>/PrdocutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>addProductToCar</servlet-name>
+    <url-pattern>/addProductToCar</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RemoveProToCart</servlet-name>
+    <url-pattern>/RemoveProToCart</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteCart</servlet-name>
+    <url-pattern>/DeleteCart</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>submitOredrServlet</servlet-name>
+    <url-pattern>/submitOredr</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/User</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckImageServlet</servlet-name>
+    <url-pattern>/CheckImage</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>confirmOrderServlcet</servlet-name>
+    <url-pattern>/confirmOrder</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CallbackServlet</servlet-name>
+    <url-pattern>/callback</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderinfoServlet</servlet-name>
+    <url-pattern>/orderinfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogOutServlet</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindAllCategoryServlet</servlet-name>
+    <url-pattern>/findallcategory</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AdminAddProductServlet</servlet-name>
+    <url-pattern>/adminAddProduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>orderlistServlet</servlet-name>
+    <url-pattern>/orderlist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>findOrderInfoByOidServlet</servlet-name>
+    <url-pattern>/findOrderInfoByOid</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>allcategorynameServlet</servlet-name>
+    <url-pattern>/allcategoryname</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>allProductlistServlet</servlet-name>
+    <url-pattern>/allProductlist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>deletecategoryServlet</servlet-name>
+    <url-pattern>/deletecategory</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>adminCategoryServlet</servlet-name>
+    <url-pattern>/adminCategoryServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>editCategoryServlet</servlet-name>
+    <url-pattern>/editCategory</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>deleteProductServlet</servlet-name>
+    <url-pattern>/deleteProduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>productDatebackServlet</servlet-name>
+    <url-pattern>/productDateback</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SerachServlet</servlet-name>
+    <url-pattern>/SerachServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>SerachPageServlet</servlet-name>
+    <url-pattern>/SerachPageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateProductServlet</servlet-name>
+    <url-pattern>/UpdateProductServlet</url-pattern>
+  </servlet-mapping>
+  	
+  <welcome-file-list>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
