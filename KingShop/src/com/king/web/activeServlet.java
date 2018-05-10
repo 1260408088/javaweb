@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.king.service.UserService;
 
 public class activeServlet extends HttpServlet {
-
+                                
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 			//获得参数
@@ -25,6 +25,7 @@ public class activeServlet extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			
 			if(isActivity){
 				response.sendRedirect(request.getContextPath()+"/login.jsp");
 			}else{
