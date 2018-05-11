@@ -7,3 +7,4 @@ web项目
 ## 2.ssh_crm   客户管理系统
 ![image](https://github.com/1260408088/javaweb/blob/master/ssh_crm/WebContent/images/ssh_crm.PNG)
 预览图
+## 3.kingshop 纯粹的练手的项目
