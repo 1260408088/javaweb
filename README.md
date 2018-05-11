@@ -8,3 +8,5 @@ web项目
 ![image](https://github.com/1260408088/javaweb/blob/master/ssh_crm/WebContent/images/ssh_crm.PNG)
 预览图
 ## 3.kingshop 纯粹的练手项目
+使用了servlet、jsp、mysql、redis技术
+
